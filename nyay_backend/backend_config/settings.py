@@ -96,7 +96,7 @@ REST_FRAMEWORK = {
 
 BNS_PDF_PATH = os.getenv(
     "NYAYSETU_BNS_PDF_PATH",
-    str(BASE_DIR / "data" / "bns.pdf"),
+    str(BASE_DIR / "data" / "bns.pdf")
 )
 CHROMA_DB_DIR = os.getenv(
     "NYAYSETU_CHROMA_DIR",
