@@ -1,0 +1,203 @@
+:root {
+  font-family: "Space Grotesk", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #101828;
+  background-color: #f7f7f2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f7f2 0%, #e3ebff 100%);
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+}
+
+.layout {
+  padding: 2.5rem clamp(1rem, 4vw, 4rem) 4rem;
+}
+
+.hero {
+  background: white;
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.1);
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  margin-top: 0.35rem;
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: #475467;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(29, 41, 57, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panel header h2 {
+  margin: 0;
+}
+
+.panel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.panel-form textarea,
+.panel-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  border: 1px solid #d0d5dd;
+  font-size: 1rem;
+}
+
+.panel-form button {
+  border: none;
+  background: #0f62fe;
+  color: white;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.panel-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.panel-form button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(15, 98, 254, 0.3);
+}
+
+.results-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.result {
+  border: 1px solid #e4e7ec;
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.result header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #475467;
+}
+
+.badge {
+  background: #d7e3ff;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.mapped-context {
+  border-radius: 16px;
+  background: #f4f6fb;
+  padding: 1rem;
+  font-size: 0.95rem;
+}
+
+.mapped-context ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.error {
+  color: #d92d20;
+}
+
+.case-strength-result {
+  border-radius: 18px;
+  background: #0f172a;
+  color: white;
+  padding: 1.25rem;
+}
+
+.case-strength-result .score {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.case-strength-result pre {
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.heatmap-card {
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px solid #e4e7ec;
+}
+
+.heatmap-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.heatmap-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.heatmap-card li {
+  margin-bottom: 0.2rem;
+}
+
+.heatmap-card.severity-critical {
+  background: #fee4e2;
+}
+
+.heatmap-card.severity-severe {
+  background: #ffe4c7;
+}
+
+.heatmap-card.severity-moderate {
+  background: #fff4d6;
+}
+
+.heatmap-card.severity-low {
+  background: #e3f8e6;
+}
